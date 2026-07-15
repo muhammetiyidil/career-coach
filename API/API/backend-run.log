@@ -1,0 +1,309 @@
+Using launch settings from C:\Users\muham\OneDrive\Desktop\graduation-project\WebApplication4\WebApplication4\Properties\launchSettings.json...
+Building...
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7127
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5021
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\muham\OneDrive\Desktop\graduation-project\WebApplication4\WebApplication4
+warn: Microsoft.EntityFrameworkCore.Model.Validation[30000]
+      No store type was specified for the decimal property 'AverageSalary' on entity type 'Career'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (55ms) [Parameters=[@__request_Email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[City], [u].[Country], [u].[CreatedAt], [u].[CvSummary], [u].[DateOfBirth], [u].[EducationLevel], [u].[Email], [u].[ExperienceText], [u].[FirstName], [u].[IsProfileCompleted], [u].[LastName], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpires], [u].[Phone], [u].[ProfilePhotoUrl], [u].[ProjectText], [u].[Role]
+      FROM [Users] AS [u]
+      WHERE [u].[Email] = @__request_Email_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[City], [u].[Country], [u].[CreatedAt], [u].[CvSummary], [u].[DateOfBirth], [u].[EducationLevel], [u].[Email], [u].[ExperienceText], [u].[FirstName], [u].[IsProfileCompleted], [u].[LastName], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpires], [u].[Phone], [u].[ProfilePhotoUrl], [u].[ProjectText], [u].[Role]
+      FROM [Users] AS [u]
+      WHERE [u].[Id] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[FirstName], [u].[LastName], [u].[Email], [u].[Role], [u].[Phone], [u].[Country], [u].[City], [u].[ProfilePhotoUrl], [u].[DateOfBirth], [u].[EducationLevel], [u].[CvSummary], [u].[ExperienceText], [u].[ProjectText], [u].[IsProfileCompleted], [u].[CreatedAt]
+      FROM [Users] AS [u]
+      WHERE [u].[Id] = @__id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[Level], [u].[SkillId], [u].[UserId], [s].[Id], [s].[Category], [s].[Description], [s].[Name], [s].[PersonalDevelopmentActivityTemplate], [s].[PersonalFeedbackTemplate], [s].[PersonalRealLifeExerciseTemplate], [s].[PersonalReflectionTemplate], [s].[SkillType]
+      FROM [UserSkills] AS [u]
+      INNER JOIN [Skills] AS [s] ON [u].[SkillId] = [s].[Id]
+      WHERE [u].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[UserId], [u].[CareerId], [u].[MatchPercentage], [u].[SelectedAt], [c].[Title] AS [CareerTitle], [c].[Description] AS [CareerDescription]
+      FROM [UserCareers] AS [u]
+      INNER JOIN [Careers] AS [c] ON [u].[CareerId] = [c].[Id]
+      WHERE [u].[UserId] = @__userId_0
+      ORDER BY [u].[SelectedAt] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[HasThisSkill], [u].[ProgressPercentage], [u].[SkillId], [u].[Task1Completed], [u].[Task2Completed], [u].[Task3Completed], [u].[UserId], [s].[Id], [s].[Category], [s].[Description], [s].[Name], [s].[PersonalDevelopmentActivityTemplate], [s].[PersonalFeedbackTemplate], [s].[PersonalRealLifeExerciseTemplate], [s].[PersonalReflectionTemplate], [s].[SkillType]
+      FROM [UserPersonalSkillProgresses] AS [u]
+      INNER JOIN [Skills] AS [s] ON [u].[SkillId] = [s].[Id]
+      WHERE [u].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [e].[Id], [e].[CustomDepartmentName], [e].[DegreeLevel], [e].[DepartmentId], [e].[Description], [e].[EndYear], [e].[GPA], [e].[SchoolName], [e].[StartYear], [e].[UserId], [d].[Id], [d].[Name]
+      FROM [Educations] AS [e]
+      LEFT JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+      WHERE [e].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[AverageSalary], [c].[CareerCategory], [c].[DemandLevel], [c].[Description], [c].[Industry], [c].[RequiredEducation], [c].[Title], [c].[WorkType]
+      FROM [Careers] AS [c]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CareerId], [c].[ImportanceScore], [c].[RequiredLevel], [c].[SkillId], [s].[Id], [s].[Category], [s].[Description], [s].[Name], [s].[PersonalDevelopmentActivityTemplate], [s].[PersonalFeedbackTemplate], [s].[PersonalRealLifeExerciseTemplate], [s].[PersonalReflectionTemplate], [s].[SkillType]
+      FROM [CareerSkills] AS [c]
+      INNER JOIN [Skills] AS [s] ON [c].[SkillId] = [s].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [s].[Id], [s].[CaseStudy01], [s].[CaseStudy12], [s].[CaseStudy23], [s].[CaseStudy34], [s].[CaseStudy45], [s].[Name], [s].[PracticeTask01], [s].[PracticeTask12], [s].[PracticeTask23], [s].[PracticeTask34], [s].[PracticeTask45], [s].[ProjectDescription01], [s].[ProjectDescription12], [s].[ProjectDescription23], [s].[ProjectDescription34], [s].[ProjectDescription45], [s].[ProjectSuggestion01], [s].[ProjectSuggestion12], [s].[ProjectSuggestion23], [s].[ProjectSuggestion34], [s].[ProjectSuggestion45], [s].[SkillType]
+      FROM [SkillCategories] AS [s]
+      WHERE [s].[SkillType] = N'Technical'
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [l].[Id], [l].[BaseSearchUrl], [l].[IsActive], [l].[Name], [l].[QuerySuffix]
+      FROM [LearningPlatforms] AS [l]
+      WHERE [l].[IsActive] = CAST(1 AS bit)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [j].[Id], [j].[BaseSearchUrl], [j].[IsActive], [j].[Name]
+      FROM [JobPlatforms] AS [j]
+      WHERE [j].[IsActive] = CAST(1 AS bit)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [s].[Id], [s].[Category], [s].[Description], [s].[Name], [s].[PersonalDevelopmentActivityTemplate], [s].[PersonalFeedbackTemplate], [s].[PersonalRealLifeExerciseTemplate], [s].[PersonalReflectionTemplate], [s].[SkillType]
+      FROM [Skills] AS [s]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[UserId], [u].[SkillId], [s].[Name] AS [SkillName], [s].[Category] AS [SkillCategory], [s].[SkillType], [u].[Level], CASE
+          WHEN [s].[SkillType] = N'Personal' THEN CASE
+              WHEN [u].[Level] = 1 THEN 33
+              WHEN [u].[Level] = 2 THEN 66
+              WHEN [u].[Level] >= 3 THEN 100
+              ELSE 0
+          END
+          ELSE [u].[Level]
+      END AS [LevelPercent]
+      FROM [UserSkills] AS [u]
+      INNER JOIN [Skills] AS [s] ON [u].[SkillId] = [s].[Id]
+      WHERE [u].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[UserId], [u].[SkillId], [s].[Name] AS [SkillName], [u].[HasThisSkill], [u].[Task1Completed], [u].[Task2Completed], [u].[Task3Completed], [u].[ProgressPercentage]
+      FROM [UserPersonalSkillProgresses] AS [u]
+      INNER JOIN [Skills] AS [s] ON [u].[SkillId] = [s].[Id]
+      WHERE [u].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[CareerId]
+      FROM [UserCareers] AS [u]
+      WHERE [u].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (39ms) [Parameters=[@__selectedCareerIds_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT DISTINCT [c].[SkillId]
+      FROM [CareerSkills] AS [c]
+      WHERE [c].[CareerId] IN (
+          SELECT [s].[value]
+          FROM OPENJSON(@__selectedCareerIds_0) WITH ([value] int '$') AS [s]
+      )
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[City], [u].[Country], [u].[CreatedAt], [u].[CvSummary], [u].[DateOfBirth], [u].[EducationLevel], [u].[Email], [u].[ExperienceText], [u].[FirstName], [u].[IsProfileCompleted], [u].[LastName], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpires], [u].[Phone], [u].[ProfilePhotoUrl], [u].[ProjectText], [u].[Role]
+      FROM [Users] AS [u]
+      WHERE [u].[Id] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[Level], [u].[SkillId], [u].[UserId], [s].[Id], [s].[Category], [s].[Description], [s].[Name], [s].[PersonalDevelopmentActivityTemplate], [s].[PersonalFeedbackTemplate], [s].[PersonalRealLifeExerciseTemplate], [s].[PersonalReflectionTemplate], [s].[SkillType]
+      FROM [UserSkills] AS [u]
+      INNER JOIN [Skills] AS [s] ON [u].[SkillId] = [s].[Id]
+      WHERE [u].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[HasThisSkill], [u].[ProgressPercentage], [u].[SkillId], [u].[Task1Completed], [u].[Task2Completed], [u].[Task3Completed], [u].[UserId], [s].[Id], [s].[Category], [s].[Description], [s].[Name], [s].[PersonalDevelopmentActivityTemplate], [s].[PersonalFeedbackTemplate], [s].[PersonalRealLifeExerciseTemplate], [s].[PersonalReflectionTemplate], [s].[SkillType]
+      FROM [UserPersonalSkillProgresses] AS [u]
+      INNER JOIN [Skills] AS [s] ON [u].[SkillId] = [s].[Id]
+      WHERE [u].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [e].[Id], [e].[CustomDepartmentName], [e].[DegreeLevel], [e].[DepartmentId], [e].[Description], [e].[EndYear], [e].[GPA], [e].[SchoolName], [e].[StartYear], [e].[UserId], [d].[Id], [d].[Name]
+      FROM [Educations] AS [e]
+      LEFT JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+      WHERE [e].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[AverageSalary], [c].[CareerCategory], [c].[DemandLevel], [c].[Description], [c].[Industry], [c].[RequiredEducation], [c].[Title], [c].[WorkType]
+      FROM [Careers] AS [c]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CareerId], [c].[ImportanceScore], [c].[RequiredLevel], [c].[SkillId], [s].[Id], [s].[Category], [s].[Description], [s].[Name], [s].[PersonalDevelopmentActivityTemplate], [s].[PersonalFeedbackTemplate], [s].[PersonalRealLifeExerciseTemplate], [s].[PersonalReflectionTemplate], [s].[SkillType]
+      FROM [CareerSkills] AS [c]
+      INNER JOIN [Skills] AS [s] ON [c].[SkillId] = [s].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [s].[Id], [s].[CaseStudy01], [s].[CaseStudy12], [s].[CaseStudy23], [s].[CaseStudy34], [s].[CaseStudy45], [s].[Name], [s].[PracticeTask01], [s].[PracticeTask12], [s].[PracticeTask23], [s].[PracticeTask34], [s].[PracticeTask45], [s].[ProjectDescription01], [s].[ProjectDescription12], [s].[ProjectDescription23], [s].[ProjectDescription34], [s].[ProjectDescription45], [s].[ProjectSuggestion01], [s].[ProjectSuggestion12], [s].[ProjectSuggestion23], [s].[ProjectSuggestion34], [s].[ProjectSuggestion45], [s].[SkillType]
+      FROM [SkillCategories] AS [s]
+      WHERE [s].[SkillType] = N'Technical'
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [l].[Id], [l].[BaseSearchUrl], [l].[IsActive], [l].[Name], [l].[QuerySuffix]
+      FROM [LearningPlatforms] AS [l]
+      WHERE [l].[IsActive] = CAST(1 AS bit)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [j].[Id], [j].[BaseSearchUrl], [j].[IsActive], [j].[Name]
+      FROM [JobPlatforms] AS [j]
+      WHERE [j].[IsActive] = CAST(1 AS bit)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[UserId], [u].[CareerId], [u].[MatchPercentage], [u].[SelectedAt], [c].[Title] AS [CareerTitle], [c].[Description] AS [CareerDescription]
+      FROM [UserCareers] AS [u]
+      INNER JOIN [Careers] AS [c] ON [u].[CareerId] = [c].[Id]
+      WHERE [u].[UserId] = @__userId_0
+      ORDER BY [u].[SelectedAt] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (122ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[City], [u].[Country], [u].[CreatedAt], [u].[CvSummary], [u].[DateOfBirth], [u].[EducationLevel], [u].[Email], [u].[ExperienceText], [u].[FirstName], [u].[IsProfileCompleted], [u].[LastName], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpires], [u].[Phone], [u].[ProfilePhotoUrl], [u].[ProjectText], [u].[Role]
+      FROM [Users] AS [u]
+      WHERE [u].[Id] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (37ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[Level], [u].[SkillId], [u].[UserId], [s].[Id], [s].[Category], [s].[Description], [s].[Name], [s].[PersonalDevelopmentActivityTemplate], [s].[PersonalFeedbackTemplate], [s].[PersonalRealLifeExerciseTemplate], [s].[PersonalReflectionTemplate], [s].[SkillType]
+      FROM [UserSkills] AS [u]
+      INNER JOIN [Skills] AS [s] ON [u].[SkillId] = [s].[Id]
+      WHERE [u].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[HasThisSkill], [u].[ProgressPercentage], [u].[SkillId], [u].[Task1Completed], [u].[Task2Completed], [u].[Task3Completed], [u].[UserId], [s].[Id], [s].[Category], [s].[Description], [s].[Name], [s].[PersonalDevelopmentActivityTemplate], [s].[PersonalFeedbackTemplate], [s].[PersonalRealLifeExerciseTemplate], [s].[PersonalReflectionTemplate], [s].[SkillType]
+      FROM [UserPersonalSkillProgresses] AS [u]
+      INNER JOIN [Skills] AS [s] ON [u].[SkillId] = [s].[Id]
+      WHERE [u].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (19ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [e].[Id], [e].[CustomDepartmentName], [e].[DegreeLevel], [e].[DepartmentId], [e].[Description], [e].[EndYear], [e].[GPA], [e].[SchoolName], [e].[StartYear], [e].[UserId], [d].[Id], [d].[Name]
+      FROM [Educations] AS [e]
+      LEFT JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+      WHERE [e].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[AverageSalary], [c].[CareerCategory], [c].[DemandLevel], [c].[Description], [c].[Industry], [c].[RequiredEducation], [c].[Title], [c].[WorkType]
+      FROM [Careers] AS [c]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CareerId], [c].[ImportanceScore], [c].[RequiredLevel], [c].[SkillId], [s].[Id], [s].[Category], [s].[Description], [s].[Name], [s].[PersonalDevelopmentActivityTemplate], [s].[PersonalFeedbackTemplate], [s].[PersonalRealLifeExerciseTemplate], [s].[PersonalReflectionTemplate], [s].[SkillType]
+      FROM [CareerSkills] AS [c]
+      INNER JOIN [Skills] AS [s] ON [c].[SkillId] = [s].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [s].[Id], [s].[CaseStudy01], [s].[CaseStudy12], [s].[CaseStudy23], [s].[CaseStudy34], [s].[CaseStudy45], [s].[Name], [s].[PracticeTask01], [s].[PracticeTask12], [s].[PracticeTask23], [s].[PracticeTask34], [s].[PracticeTask45], [s].[ProjectDescription01], [s].[ProjectDescription12], [s].[ProjectDescription23], [s].[ProjectDescription34], [s].[ProjectDescription45], [s].[ProjectSuggestion01], [s].[ProjectSuggestion12], [s].[ProjectSuggestion23], [s].[ProjectSuggestion34], [s].[ProjectSuggestion45], [s].[SkillType]
+      FROM [SkillCategories] AS [s]
+      WHERE [s].[SkillType] = N'Technical'
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [l].[Id], [l].[BaseSearchUrl], [l].[IsActive], [l].[Name], [l].[QuerySuffix]
+      FROM [LearningPlatforms] AS [l]
+      WHERE [l].[IsActive] = CAST(1 AS bit)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [j].[Id], [j].[BaseSearchUrl], [j].[IsActive], [j].[Name]
+      FROM [JobPlatforms] AS [j]
+      WHERE [j].[IsActive] = CAST(1 AS bit)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[UserId], [u].[SkillId], [s].[Name] AS [SkillName], [u].[HasThisSkill], [u].[Task1Completed], [u].[Task2Completed], [u].[Task3Completed], [u].[ProgressPercentage]
+      FROM [UserPersonalSkillProgresses] AS [u]
+      INNER JOIN [Skills] AS [s] ON [u].[SkillId] = [s].[Id]
+      WHERE [u].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (16ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[UserId], [u].[CareerId], [u].[MatchPercentage], [u].[SelectedAt], [c].[Title] AS [CareerTitle], [c].[Description] AS [CareerDescription]
+      FROM [UserCareers] AS [u]
+      INNER JOIN [Careers] AS [c] ON [u].[CareerId] = [c].[Id]
+      WHERE [u].[UserId] = @__userId_0
+      ORDER BY [u].[SelectedAt] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (13ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[UserId], [u].[SkillId], [s].[Name] AS [SkillName], [s].[Category] AS [SkillCategory], [s].[SkillType], [u].[Level], CASE
+          WHEN [s].[SkillType] = N'Personal' THEN CASE
+              WHEN [u].[Level] = 1 THEN 33
+              WHEN [u].[Level] = 2 THEN 66
+              WHEN [u].[Level] >= 3 THEN 100
+              ELSE 0
+          END
+          ELSE [u].[Level]
+      END AS [LevelPercent]
+      FROM [UserSkills] AS [u]
+      INNER JOIN [Skills] AS [s] ON [u].[SkillId] = [s].[Id]
+      WHERE [u].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[UserId], [u].[SkillId], [s].[Name] AS [SkillName], [u].[HasThisSkill], [u].[Task1Completed], [u].[Task2Completed], [u].[Task3Completed], [u].[ProgressPercentage]
+      FROM [UserPersonalSkillProgresses] AS [u]
+      INNER JOIN [Skills] AS [s] ON [u].[SkillId] = [s].[Id]
+      WHERE [u].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [s].[Id], [s].[Category], [s].[Description], [s].[Name], [s].[PersonalDevelopmentActivityTemplate], [s].[PersonalFeedbackTemplate], [s].[PersonalRealLifeExerciseTemplate], [s].[PersonalReflectionTemplate], [s].[SkillType]
+      FROM [Skills] AS [s]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[UserId], [u].[SkillId], [s].[Name] AS [SkillName], [s].[Category] AS [SkillCategory], [s].[SkillType], [u].[Level], CASE
+          WHEN [s].[SkillType] = N'Personal' THEN CASE
+              WHEN [u].[Level] = 1 THEN 33
+              WHEN [u].[Level] = 2 THEN 66
+              WHEN [u].[Level] >= 3 THEN 100
+              ELSE 0
+          END
+          ELSE [u].[Level]
+      END AS [LevelPercent]
+      FROM [UserSkills] AS [u]
+      INNER JOIN [Skills] AS [s] ON [u].[SkillId] = [s].[Id]
+      WHERE [u].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [l].[Id], [l].[BaseSearchUrl], [l].[IsActive], [l].[Name], [l].[QuerySuffix]
+      FROM [LearningPlatforms] AS [l]
+      WHERE [l].[IsActive] = CAST(1 AS bit)
+      ORDER BY [l].[Name]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [j].[Id], [j].[BaseSearchUrl], [j].[IsActive], [j].[Name]
+      FROM [JobPlatforms] AS [j]
+      WHERE [j].[IsActive] = CAST(1 AS bit)
+      ORDER BY [j].[Name]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[CaseStudyDescription], [u].[FromLevel], [u].[IsCaseStudyCompleted], [u].[IsCompleted], [u].[IsPracticeTaskCompleted], [u].[IsProjectCompleted], [u].[PracticeTaskDescription], [u].[ProjectDescription], [u].[SelectedPlatforms], [u].[SkillId], [u].[ToLevel], [u].[UpdatedAt], [u].[UserId]
+      FROM [UserRoadmapStates] AS [u]
+      WHERE [u].[UserId] = @__userId_0
+      ORDER BY [u].[UpdatedAt] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (46ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [p].[Id], [p].[CreatedAt], [p].[Description], [p].[GithubUrl], [p].[LiveDemoUrl], [p].[ProjectType], [p].[Technologies], [p].[Title], [p].[UserId]
+      FROM [Projects] AS [p]
+      WHERE [p].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (40ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [d].[Id], [d].[Name]
+      FROM [Departments] AS [d]
+      ORDER BY [d].[Name]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (57ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [e].[Id], [e].[CompanyName], [e].[Description], [e].[DurationInMonths], [e].[Position], [e].[Technologies], [e].[UserId]
+      FROM [Experiences] AS [e]
+      WHERE [e].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (20ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [e].[Id], [e].[UserId], [e].[DepartmentId], CASE
+          WHEN [d].[Id] IS NOT NULL THEN [d].[Name]
+          ELSE [e].[CustomDepartmentName]
+      END AS [DepartmentName], [e].[CustomDepartmentName], [e].[SchoolName], [e].[DegreeLevel], [e].[StartYear], [e].[EndYear], [e].[GPA], [e].[Description]
+      FROM [Educations] AS [e]
+      LEFT JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+      WHERE [e].[UserId] = @__userId_0
