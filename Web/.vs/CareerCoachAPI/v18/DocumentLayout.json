@@ -1,0 +1,133 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Coding\\graduation-project-anti\\WebApplication4\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1415297A-DD63-45B0-AEC6-D4655A095D13}|WebApplication4\\CareerCoachAPI.csproj|d:\\coding\\graduation-project-anti\\webapplication4\\webapplication4\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1415297A-DD63-45B0-AEC6-D4655A095D13}|WebApplication4\\CareerCoachAPI.csproj|solutionrelative:webapplication4\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1415297A-DD63-45B0-AEC6-D4655A095D13}|WebApplication4\\CareerCoachAPI.csproj|d:\\coding\\graduation-project-anti\\webapplication4\\webapplication4\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1415297A-DD63-45B0-AEC6-D4655A095D13}|WebApplication4\\CareerCoachAPI.csproj|solutionrelative:webapplication4\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1415297A-DD63-45B0-AEC6-D4655A095D13}|WebApplication4\\CareerCoachAPI.csproj|d:\\coding\\graduation-project-anti\\webapplication4\\webapplication4\\controllers\\careermatchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1415297A-DD63-45B0-AEC6-D4655A095D13}|WebApplication4\\CareerCoachAPI.csproj|solutionrelative:webapplication4\\controllers\\careermatchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1415297A-DD63-45B0-AEC6-D4655A095D13}|WebApplication4\\CareerCoachAPI.csproj|d:\\coding\\graduation-project-anti\\webapplication4\\webapplication4\\controllers\\skillanalyzercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1415297A-DD63-45B0-AEC6-D4655A095D13}|WebApplication4\\CareerCoachAPI.csproj|solutionrelative:webapplication4\\controllers\\skillanalyzercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1415297A-DD63-45B0-AEC6-D4655A095D13}|WebApplication4\\CareerCoachAPI.csproj|d:\\coding\\graduation-project-anti\\webapplication4\\webapplication4\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1415297A-DD63-45B0-AEC6-D4655A095D13}|WebApplication4\\CareerCoachAPI.csproj|solutionrelative:webapplication4\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1415297A-DD63-45B0-AEC6-D4655A095D13}|WebApplication4\\CareerCoachAPI.csproj|d:\\coding\\graduation-project-anti\\webapplication4\\webapplication4\\careercoachapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1415297A-DD63-45B0-AEC6-D4655A095D13}|WebApplication4\\CareerCoachAPI.csproj|solutionrelative:webapplication4\\careercoachapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1415297A-DD63-45B0-AEC6-D4655A095D13}|WebApplication4\\CareerCoachAPI.csproj|d:\\coding\\graduation-project-anti\\webapplication4\\webapplication4\\controllers\\skillcategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1415297A-DD63-45B0-AEC6-D4655A095D13}|WebApplication4\\CareerCoachAPI.csproj|solutionrelative:webapplication4\\controllers\\skillcategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\Coding\\graduation-project-anti\\WebApplication4\\WebApplication4\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "WebApplication4\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\Coding\\graduation-project-anti\\WebApplication4\\WebApplication4\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "WebApplication4\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAABkBAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T11:48:42.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Coding\\graduation-project-anti\\WebApplication4\\WebApplication4\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "WebApplication4\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Coding\\graduation-project-anti\\WebApplication4\\WebApplication4\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "WebApplication4\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAiwFsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T11:48:03.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CareerCoachAPI.csproj",
+              "DocumentMoniker": "D:\\Coding\\graduation-project-anti\\WebApplication4\\WebApplication4\\CareerCoachAPI.csproj",
+              "RelativeDocumentMoniker": "WebApplication4\\CareerCoachAPI.csproj",
+              "ToolTip": "D:\\Coding\\graduation-project-anti\\WebApplication4\\WebApplication4\\CareerCoachAPI.csproj",
+              "RelativeToolTip": "WebApplication4\\CareerCoachAPI.csproj",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAmwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-07T07:50:46.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SkillAnalyzerController.cs",
+              "DocumentMoniker": "D:\\Coding\\graduation-project-anti\\WebApplication4\\WebApplication4\\Controllers\\SkillAnalyzerController.cs",
+              "RelativeDocumentMoniker": "WebApplication4\\Controllers\\SkillAnalyzerController.cs",
+              "ToolTip": "D:\\Coding\\graduation-project-anti\\WebApplication4\\WebApplication4\\Controllers\\SkillAnalyzerController.cs",
+              "RelativeToolTip": "WebApplication4\\Controllers\\SkillAnalyzerController.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAawJIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T07:50:46.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SkillCategoriesController.cs",
+              "DocumentMoniker": "D:\\Coding\\graduation-project-anti\\WebApplication4\\WebApplication4\\Controllers\\SkillCategoriesController.cs",
+              "RelativeDocumentMoniker": "WebApplication4\\Controllers\\SkillCategoriesController.cs",
+              "ToolTip": "D:\\Coding\\graduation-project-anti\\WebApplication4\\WebApplication4\\Controllers\\SkillCategoriesController.cs",
+              "RelativeToolTip": "WebApplication4\\Controllers\\SkillCategoriesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T07:50:46.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CareerMatchController.cs",
+              "DocumentMoniker": "D:\\Coding\\graduation-project-anti\\WebApplication4\\WebApplication4\\Controllers\\CareerMatchController.cs",
+              "RelativeDocumentMoniker": "WebApplication4\\Controllers\\CareerMatchController.cs",
+              "ToolTip": "D:\\Coding\\graduation-project-anti\\WebApplication4\\WebApplication4\\Controllers\\CareerMatchController.cs",
+              "RelativeToolTip": "WebApplication4\\Controllers\\CareerMatchController.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAowAECAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T07:50:46.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Coding\\graduation-project-anti\\WebApplication4\\WebApplication4\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApplication4\\appsettings.json",
+              "ToolTip": "D:\\Coding\\graduation-project-anti\\WebApplication4\\WebApplication4\\appsettings.json",
+              "RelativeToolTip": "WebApplication4\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-07T09:06:57.093Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
